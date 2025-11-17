@@ -1,0 +1,15 @@
+{
+  "name": "code-explainer-app",
+  "version": "1.0.0",
+  "description": "Desktop application that explains source code to beginners.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": ["electron", "code", "explanation", "desktop"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "28.3.1"
+  }
+}
