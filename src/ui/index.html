@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Code Explainer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="light">
+  <header>
+    <h1>Code Explainer</h1>
+    <div class="toolbar">
+      <button id="openBtn">Open File</button>
+      <button id="clearBtn">Clear</button>
+      <button id="saveBtn" disabled>Save Explanation</button>
+      <button id="themeToggle">Switch to Dark</button>
+    </div>
+  </header>
+  <main>
+    <section class="status-panel">
+      <div id="fileInfo">No file loaded</div>
+      <div id="languageInfo">Language: Unknown</div>
+    </section>
+    <section class="output-panel">
+      <pre id="output" aria-label="Explanation output">Load a file to see the explanation here.</pre>
+    </section>
+  </main>
+  <script src="renderer.js"></script>
+</body>
+</html>

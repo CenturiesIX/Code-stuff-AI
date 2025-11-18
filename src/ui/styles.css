@@ -1,0 +1,124 @@
+:root {
+  --bg-light: #f8f9fa;
+  --bg-dark: #1f1f1f;
+  --text-light: #1f1f1f;
+  --text-dark: #f8f9fa;
+  --accent: #2a7de1;
+  --border: #d1d5db;
+  --panel: #ffffff;
+  --panel-dark: #2b2b2b;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+body.dark {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+header {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  background: var(--panel);
+}
+
+body.dark header {
+  border-color: #3b3b3b;
+  background: var(--panel-dark);
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  border: 1px solid var(--border);
+  background: #ffffff;
+  color: #1f1f1f;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+body.dark button {
+  background: #3b3b3b;
+  color: var(--text-dark);
+  border-color: #4b4b4b;
+}
+
+button:hover:not(:disabled) {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  overflow: hidden;
+  flex: 1;
+}
+
+.status-panel {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--panel);
+}
+
+body.dark .status-panel {
+  border-color: #3b3b3b;
+  background: var(--panel-dark);
+}
+
+.output-panel {
+  flex: 1;
+  display: flex;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--panel);
+  overflow: hidden;
+}
+
+body.dark .output-panel {
+  border-color: #3b3b3b;
+  background: var(--panel-dark);
+}
+
+pre#output {
+  margin: 0;
+  padding: 16px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-y: auto;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  width: 100%;
+}
